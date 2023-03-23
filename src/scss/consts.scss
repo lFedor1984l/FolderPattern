@@ -4,17 +4,18 @@
 
 // Самый часто встречающий шрифт 
 //================================================================================================
-// body {
-//     font-family: ;
-//     font-size: ;
-//     font-weight: ;
-//     line-height: ;
-// }
+body {
+    font-family: 'PT Sans Caption';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: black;
+}
 
 // Стилизация контейнера
 //================================================================================================
-// .container {
-//     margin: 0 auto;
-//     padding: ;
-//     max-width: 1000px;
-// }
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1180px;
+}

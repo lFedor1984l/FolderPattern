@@ -1,0 +1,31 @@
+.footer {
+    background-color: #08664F;
+    &__iiner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.footer__menu {
+    &-list {
+        display: flex;
+        align-items: center;
+    }
+    &-link {
+        margin-right: 30px;
+        color: #ffffff;
+    }
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    padding: 55px 0px;
+    &-link {
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}

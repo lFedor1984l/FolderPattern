@@ -1,0 +1,26 @@
+.page__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    &__arrow {
+        display: block;
+    }
+    &__number {
+        margin: 0px 36px;
+        span {
+            font-size: 20px;
+            line-height: 23px;
+        }
+        &-two {
+            color: #C0C0C0;
+        }
+        &-three {
+            color: #C0C0C0;
+        }
+    }
+}

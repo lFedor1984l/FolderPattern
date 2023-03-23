@@ -4,8 +4,10 @@
 @import 'vars';
 @import 'consts';
 @import 'header';
-@import 'section1';
-@import 'section2';
+@import 'main';
+@import 'sectionFirst';
+@import 'sectionSecond';
+@import 'sectionPage';
 @import 'section3';
 @import 'section4';
 @import 'section5';
@@ -14,11 +16,3 @@
 
 
 
-
-@import 'mediaBreakpoints1';
-@import 'mediaBreakpoints2';
-@import 'mediaBreakpoints3';
-@import 'mediaBreakpoints4';
-@import 'mediaBreakpoints5';
-@import 'mediaBreakpoints6';
-@import 'mediaBreakpoints7';

@@ -1,9 +1,11 @@
 .header {
     position: fixed;
+    height: 70px;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 50;
+    background-color: $mainColor;
 }
 
 .header::before {
@@ -13,23 +15,147 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $mainColor;
     z-index: 2;
 }
 
 .header__inner {
-    height: 80px;
-    position: relative;
-}
-
-.header__logo {
     position: relative;
     z-index: 3;
+    padding: 12px 0px;
+    @include flexSpaceBeetween;
+    &-left {
+        @include flexCenter;
+    }
+    &-logo {
+        margin-right: 20px;
+        position: relative;
+        z-index: 3;
+    }
+    &-location {
+        &-city {
+            display: block;
+            line-height: 21px;
+        }
+        &-strit {
+            display: block;
+            line-height: 21px;
+        }
+    }
+    &-right {
+        &-tel {
+            margin-right: 35px;
+        }
+        &-button {
+            padding: 11px 23px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            color: #FFFFFF;
+            background: #0DBC91;
+            border-radius: 50px;
+        }
+    }
 }
 
+
+
+.header__bottom {
+    background-color: #1FA181;
+    z-index: 3;
+}
 .menu {
+    padding: 10px 0px;
     &__list {
+        @include flexCenter;
         position: relative;
         z-index: 2;
+    }
+    &__item {
+        margin-right: 30px;
+    }
+}
+
+// медиа запросы
+@media (max-width: 768px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .menu {
+        padding: 80px 10px 20px 20px;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        overflow: auto;
+        text-align: center;
+        background-color: aqua;
+        transition: all .5s ease 0s;
+        &__list {
+            display: block
+        }
+    }
+
+    .menu.active {
+        top: 0;
+    }
+
+    .header__inner {
+        height: 50px;
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+    
+    .header__burger span {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        top: 8px;
+        background-color: #000000;
+        transition: all .5s ease 0s;
+    }
+    
+    .header__burger::before,
+    .header__burger::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        background-color: #000000;
+        transition: all .5s ease 0s;
+    }
+    
+    .header__burger::before {
+        top: 0;
+    }
+    
+    .header__burger::after {
+        bottom: 0;
+    }
+
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 8px;
+    }
+
+    .header__btn {
+        display: none;
     }
 }

@@ -1,0 +1,22 @@
+.section__first {
+    position: relative;
+    margin-bottom: 100px;
+    padding-top: 105px;
+    &-bg {
+        position: absolute;
+        z-index: -3;
+    }
+    &-title {
+        margin-top: 144px;
+        margin-bottom: 14px;
+        width: 416px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 47px;
+        color: #364844;
+    }
+    &-text {
+        width: 367px;
+        color: #364844;
+    }
+}
